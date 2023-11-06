@@ -1,53 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Text.RegularExpressions;
 using UnityEngine;
+using System;
 
 public class CardsContainer : MonoBehaviour
 {
-  private static List<Card> cards = new List<Card>();  
-
-  public static Card At(int position)
-  {
-    return cards[position];
-  }
+  private static List<Card> cards = new List<Card>();
+  private int numberOfCardsRead = 0;
 
   void Awake()
   {
-    AddConceptCards();
-    AddComunicationCards();
-    AddBehaviorCards();
-    AddResourcesCards();
-    AddStrategyCards();
-    AddLuckCards();
+    TextAsset cardFile = Resources.Load<TextAsset>("Cards/database");
+    foreach (string card in cardFile.text.Split('\n'))
+    {
+      string[] data = card.Split('|');
+
+      numberOfCardsRead++;
+      cards.Add(ProcessNewCard(data));
+    }
   }
 
-  private void AddConceptCards()
+  private Card ProcessNewCard(string[] dataOfNewCard)
   {
-    cards.Add(new Card(1, CardType.CONCEPT, "NULL"));
+    if (dataOfNewCard.Length != 4)
+    {
+      throw new Exception("Invalid card was read in 'cards.txt'");
+    }
+
+    CardType type = CardInformation.CardTypeByName(dataOfNewCard[0].Trim());
+    string subtype = dataOfNewCard[1].Trim();
+    string question = dataOfNewCard[2].Trim();
+    string description = dataOfNewCard[3].Trim();
+
+    return new Card(type, subtype, question, description);
   }
 
-  private void AddComunicationCards()
+  public static Card At(int position)
   {
-    cards.Add(new Card(2, CardType.COMUNICATION, "NULL"));
+    return cards[position - 1];
   }
 
-  private void AddBehaviorCards()
+  public static int Length()
   {
-    cards.Add(new Card(3, CardType.BEHAVIOR, "NULL"));
+    return cards.Count;
   }
 
-  private void AddResourcesCards()
-  {
-    cards.Add(new Card(4, CardType.RESOURCES, "NULL"));
-  }
-
-  private void AddStrategyCards()
-  {
-    cards.Add(new Card(5, CardType.STRATEGY, "NULL"));
-  }
-
-  private void AddLuckCards()
-  {
-    cards.Add(new Card(6, CardType.CURIOSITY, "NULL"));
-  }
 }

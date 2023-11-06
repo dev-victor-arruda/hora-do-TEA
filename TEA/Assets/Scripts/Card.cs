@@ -5,30 +5,37 @@ using UnityEngine;
 
 public class Card
 {
-  private readonly int id;
   private readonly CardType type;
+  private readonly string subtype;
+  private readonly string question;
   private readonly string description;
 
-  public Card(int _id, CardType type, string _description)
+  public Card(CardType _type, string _subtype, string _question, string _description)
   {
-    id = _id;
-    this.type = type;
+    type = _type;
+    subtype = _subtype;
+    question = _question;
     description = _description;
   }
 
-  public string getType()
+  public CardType getType()
   {
-    return CardInformation.NameOfCard(type);
+    return type;
+  }
+
+  public string getSubtype()
+  {
+    return subtype;
+  }
+
+  public string getQuestion()
+  {
+    return question;
   }
 
   public string getDescription() 
   { 
     return description;
-  }
-
-  public int getId() 
-  { 
-    return id;
   }
 
   void Start()
