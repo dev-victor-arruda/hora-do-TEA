@@ -9,7 +9,7 @@ public class DiceCheckZoneScript : MonoBehaviour
     private void Update()
     {
         // Verifique se o dado está rolando com base em sua velocidade.
-        isDiceRolling = DiceScript.diceVelocity.magnitude > 0.1f; // Ajuste o valor 0.1f conforme necessário.
+        isDiceRolling = DiceScript.diceVelocity.magnitude > 0.1f;
 
         if (!isDiceRolling)
         {
@@ -20,8 +20,7 @@ public class DiceCheckZoneScript : MonoBehaviour
     private void OnTriggerStay(Collider col)
     {
         if (!isDiceRolling)
-        {
-            // Adicione aqui a lógica para definir o valor do dado com base no lado que o dado parou.
+        { 
             if (col.gameObject.name == "Side1")
             {
                 DiceScript.diceNumber = 6;

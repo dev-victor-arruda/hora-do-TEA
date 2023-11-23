@@ -1042,7 +1042,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 69ac15c27dbc712419e40e6e1d04543f, type: 2}
+  - {fileID: 2100000, guid: f8d17df4f469d6942a3e5dd4333d647e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1081,7 +1081,7 @@ Transform:
   m_GameObject: {fileID: 604068548}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.19, z: 0}
+  m_LocalPosition: {x: 0, y: -0.19, z: -2.95}
   m_LocalScale: {x: 2.5531209, y: 1.5063413, z: 1.939146}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1165,7 +1165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &661655898
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1227,8 +1227,8 @@ Transform:
   m_GameObject: {fileID: 661655897}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.17, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.17, z: 0.11}
+  m_LocalScale: {x: 1.25, y: 1.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2008786242}
@@ -1825,6 +1825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dice
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c419081907df8c4187e1b3c264d2c96, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2041,7 +2045,7 @@ Transform:
   m_GameObject: {fileID: 1239536840}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -0.277, z: -0.47}
+  m_LocalPosition: {x: -0.03, y: -0.44, z: -3.42}
   m_LocalScale: {x: 8.711184, y: 0.1525, z: 9.10489}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3193,7 +3197,7 @@ Camera:
   far clip plane: 1000
   field of view: 50
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 9.579678
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -3217,13 +3221,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902596573}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.17, y: 6.34, z: -0.13}
-  m_LocalScale: {x: 1.08, y: 0.5375025, z: 0.74791497}
+  m_LocalRotation: {x: -0.37476215, y: 0.009211419, z: 0.009282152, w: -0.9270288}
+  m_LocalPosition: {x: 0.4, y: 14.8, z: -17.9}
+  m_LocalScale: {x: 3.5894444, y: 1.008436, z: 1.4019719}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 160, z: 160}
+  m_LocalEulerAnglesHint: {x: 44, y: -1.915, z: 358.079}
 --- !u!1 &1905853316
 GameObject:
   m_ObjectHideFlags: 0

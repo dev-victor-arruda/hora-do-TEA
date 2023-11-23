@@ -12,23 +12,26 @@ public class Player_1 : MonoBehaviour
     {
         if (!isMoving && DiceScript.diceNumber > 0)
         {
-            StartCoroutine(MoverPersonagem(DiceScript.diceNumber)); // Move o personagem com base no resultado do dado.
+            MoverPersonagem(DiceScript.diceNumber); // Move o personagem com base no resultado do dado.
         }
-    }
+    }  
 
     // Este método é chamado externamente para mover o personagem com base no valor do dado.
-    private IEnumerator MoverPersonagem(int diceNumber)
+    private void MoverPersonagem(int diceNumber)
+    {
+        StartCoroutine(MovimentoPorCasas(diceNumber));
+    }
+
+    private IEnumerator MovimentoPorCasas(int numeroDeCasas)
     {
         isMoving = true;
-
-        for (int i = 0; i < diceNumber; i++)
+        for (int i = 0; i < numeroDeCasas; i++)
         {
             if (casaAtual < casas.Length - 1)
             {
-                casaAtual++;
+                casaAtual++; //Faz ele se movimentar pelo Tabuleiro
                 transform.position = casas[casaAtual].position; // Move o personagem para a próxima casa.
                 yield return new WaitForSeconds(1f); // Pausa para simular o movimento. Ajuste conforme necessário.
-                Debug.Log("Movendo para a casa " + casaAtual);
             }
         }
 
@@ -38,7 +41,6 @@ public class Player_1 : MonoBehaviour
             casaAtual = casas.Length - 1;
         }
 
-        isMoving = false; // Finaliza o movimento.
-        Debug.Log("Movimento concluído!");
+        //DiceScript.diceNumber = 0;
     }
 }

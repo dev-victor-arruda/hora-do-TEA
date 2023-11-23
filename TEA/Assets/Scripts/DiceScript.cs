@@ -22,7 +22,7 @@ public class DiceScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Reseta o valor do dado antes de jogar novamente
-            diceNumber = 0;
+            // diceNumber = 0;
 
             float dirX = Random.Range(0, 500);
             float dirY = Random.Range(0, 500);
@@ -34,5 +34,6 @@ public class DiceScript : MonoBehaviour
 
             Debug.Log("Dado jogado!");
         }
+        
     }
 }
