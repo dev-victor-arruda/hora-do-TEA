@@ -1,46 +1,43 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_1 : MonoBehaviour
 {
-    public Transform[] casas; // Array de posições das casas.
+    // public Transform[] casas; // Removido, agora as posições das casas estão no GameManager.
     public int casaAtual = 0; // Índice da casa atual.
-    private bool isMoving = false; // Variável de controle para evitar movimentos simultâneos.
+    public bool isMoving = false; // Agora público para que o GameManager possa acessá-lo.
 
-    void Update()
+   void Update()
+{
+    if (!isMoving && DiceScript.diceNumber > 0)
     {
-        if (!isMoving && DiceScript.diceNumber > 0)
-        {
-            MoverPersonagem(DiceScript.diceNumber); // Move o personagem com base no resultado do dado.
-        }
-    }  
-
+        GameManager.Instance.MoverJogador(transform, DiceScript.diceNumber);
+    }
+}
     // Este método é chamado externamente para mover o personagem com base no valor do dado.
-    private void MoverPersonagem(int diceNumber)
+    public void MoverPersonagem(int diceNumber, Transform[] casas)
     {
-        StartCoroutine(MovimentoPorCasas(diceNumber));
+        StartCoroutine(MovimentoPorCasas(diceNumber, casas));
     }
 
-    private IEnumerator MovimentoPorCasas(int numeroDeCasas)
+    private IEnumerator MovimentoPorCasas(int numeroDeCasas, Transform[] casas)
     {
         isMoving = true;
         for (int i = 0; i < numeroDeCasas; i++)
         {
             if (casaAtual < casas.Length - 1)
             {
-                casaAtual++; //Faz ele se movimentar pelo Tabuleiro
-                transform.position = casas[casaAtual].position; // Move o personagem para a próxima casa.
-                yield return new WaitForSeconds(1f); // Pausa para simular o movimento. Ajuste conforme necessário.
+                casaAtual++;
+                transform.position = casas[casaAtual].position;
+                yield return new WaitForSeconds(1f);
             }
         }
 
-        // Tratamento para quando o jogador atinge o fim do tabuleiro.
         if (casaAtual >= casas.Length - 1)
         {
             casaAtual = casas.Length - 1;
         }
 
-        //DiceScript.diceNumber = 0;
+        isMoving = false;
     }
 }
