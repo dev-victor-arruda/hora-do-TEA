@@ -121,3 +121,33 @@ Curiosidades|30|Você sabia?|Mulheres autistas costumam ter diagnósticos tardio
 Curiosidades|31|Você sabia?|Não existe autismo “leve”, “moderado” e “severo”, mas sim diferentes tipos de necessidades de suporte.
 Curiosidades|32|Você sabia?|Falar ao telefone pode ser um verdadeiro desafio para pessoas autistas, que normalmente já costumam ter dificuldades de identificar quando é a sua vez de falar.
 Curiosidades|33|Você sabia?|Autistas têm direito à atendimentos e assentos preferenciais, assim como seus acompanhantes.
+Sorte ou Azar|1|Azar|Você não joga esta rodada, passe a vez.
+Sorte ou Azar|2|Sorte|Escolha um oponente que não poderá jogar até a próxima rodada.
+Sorte ou Azar|3|Azar|Fique 2 rodadas sem jogar. É permitido participar das discussões, mas não movimenta o peão e nem realiza ações de descarte nessas rodadas.
+Sorte ou Azar|4|Sorte|Escolha o tema para jogar.
+Sorte ou Azar|5|Azar|Compre 2 Cartas.
+Sorte ou Azar|6|Sorte|Escolha o tema para o próximo jogador, independente da casa que ele for cair.
+Sorte ou Azar|7|Azar|Volte três casas e compre uma carta.
+Sorte ou Azar|8|Sorte|Rode os dados novamente e faça sua jogada.
+Sorte ou Azar|9|Azar|Não jogue a próxima rodada.
+Sorte ou Azar|10|Sorte|Troque de mãos com um adversário de sua escolha.
+Sorte ou Azar|11|Azar|Não pode participar de nenhuma rodada deste turno.
+Sorte ou Azar|12|Sorte|Escolha uma carta da sua mão para trocar por uma de um tema de sua escolha, devolva sua carta ao final do monte.
+Sorte ou Azar|13|Azar|Compre 2 cartas.
+Sorte ou Azar|14|Sorte|Vingança! Devolva uma ação que você recebeu de outro jogador, se não recebeu nenhuma punição durante o jogo escolha um jogador para comprar 3 cartas.
+Sorte ou Azar|15|Azar|Troque de mãos com a pessoa que tiver mais cartas na mesa, se não houver ninguém com mais cartas que você compre 3 cartas.
+Sorte ou Azar|16|Azar|Você não joga esta rodada, passe a vez.
+Sorte ou Azar|17|Sorte|Escolha um oponente que não poderá jogar até a próxima rodada.
+Sorte ou Azar|18|Azar|Fique 2 rodadas sem jogar. É permitido participar das discussões, mas não movimenta o peão e nem realiza ações de descarte nessas rodadas.
+Sorte ou Azar|19|Sorte|Escolha o tema para jogar.
+Sorte ou Azar|20|Azar|Compre 2 Cartas.
+Sorte ou Azar|21|Sorte|Escolha o tema para o próximo jogador, independente da casa que ele for cair.
+Sorte ou Azar|22|Azar|Volte três casas e compre uma carta.
+Sorte ou Azar|23|Sorte|Rode os dados novamente e faça sua jogada.
+Sorte ou Azar|24|Azar|Não jogue a próxima rodada.
+Sorte ou Azar|25|Sorte|Troque de mãos com um adversário de sua escolha.
+Sorte ou Azar|26|Azar|Não pode participar de nenhuma rodada deste turno.
+Sorte ou Azar|27|Sorte|Escolha uma carta da sua mão para trocar por uma de um tema de sua escolha, devolva sua carta ao final do monte.
+Sorte ou Azar|28|Azar|Compre 2 cartas.
+Sorte ou Azar|29|Sorte|Vingança! Devolva uma ação que você recebeu de outro jogador, se não recebeu nenhuma punição durante o jogo escolha um jogador para comprar 3 cartas.
+Sorte ou Azar|30|Azar|Troque de mãos com a pessoa que tiver mais cartas na mesa, se não houver ninguém com mais cartas que você compre 2 cartas.
